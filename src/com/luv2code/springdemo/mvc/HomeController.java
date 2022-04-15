@@ -11,6 +11,4 @@ public class HomeController {
 		return "main-menu";	// This method will show main-menu web page
 	}
 	
-	
-	
 }
