@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller // This tells spring, hey spring this is a MVC Controller
 public class HelloWorldController {
@@ -37,7 +38,7 @@ public class HelloWorldController {
 		theName = theName.toUpperCase();
 		
 		//Create the message
-		String result = "Yo!" + theName;
+		String result = "Yo! " + theName;
 		
 		//add message to the model
 		model.addAttribute("message",result);
@@ -46,4 +47,23 @@ public class HelloWorldController {
 		
 	}
 	
+	//now a controller method to read form data & 
+		//add data to the model 
+		
+		@RequestMapping("/processFormVersionThree")
+		public String processFormVersionThree(@RequestParam("studentName"), Model model) {
+			
+			//read the request parameter from the HTML form
+			String theName = request.getParameter("studentName");
+			
+			//Convert the data to all UpperCase
+			theName = theName.toUpperCase();
+			
+			//Create the message
+			String result = "Yo! " + theName;
+			
+			//add message to the model
+			model.addAttribute("message",result);
+			
+			return "helloworld";
 }
