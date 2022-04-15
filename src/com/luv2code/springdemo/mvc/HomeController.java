@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller    // This tells Spring, hey Spring this is a MVC Controller
 public class HomeController {
 
-	@RequestMapping("/")   //Url request will execute this mapped method
+	@RequestMapping("/")   //Url request will execute this mapped method, only "/" is used here for mapping
 	public String showPage() {
 		return "main-menu";	// This method will show main-menu web page
 	}
