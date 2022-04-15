@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller // This tells spring, hey spring this is a MVC Controller
+@RequestMapping("/hello")
 public class HelloWorldController {
 
 	//need a controller method to show the initial HTML form
