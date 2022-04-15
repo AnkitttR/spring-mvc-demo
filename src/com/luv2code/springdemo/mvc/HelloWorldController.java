@@ -51,19 +51,22 @@ public class HelloWorldController {
 		//add data to the model 
 		
 		@RequestMapping("/processFormVersionThree")
-		public String processFormVersionThree(@RequestParam("studentName"), Model model) {
+		public String processFormVersionThree(
+				@RequestParam("studentName") String theName, Model model) {
+//@RequestParam binded input studentName to String (theName)
+		
 			
-			//read the request parameter from the HTML form
-			String theName = request.getParameter("studentName");
+//			//read the request parameter from the HTML form
+//			String theName = request.getParameter("studentName"); // No longer needed because @RequestParam is used above
 			
 			//Convert the data to all UpperCase
 			theName = theName.toUpperCase();
 			
 			//Create the message
-			String result = "Yo! " + theName;
+			String result = "Hey my friend from v3! " + theName;
 			
 			//add message to the model
 			model.addAttribute("message",result);
 			
 			return "helloworld";
-}
+}}
