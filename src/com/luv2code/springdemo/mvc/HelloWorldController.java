@@ -31,12 +31,17 @@ public class HelloWorldController {
 	public String letsShoutDude(HttpServletRequest request, Model model) {
 		
 		//read the request parameter from the HTML form
+		String theName = request.getParameter("studentName");
 		
 		//Convert the data to all UpperCase
+		theName = theName.toUpperCase();
 		
 		//Create the message
+		String result = "Yo!" + theName;
 		
 		//add message to the model
+		model.addAttribute("message",result);
+		
 		return "helloworld";
 		
 	}
