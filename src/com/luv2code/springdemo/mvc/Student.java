@@ -8,6 +8,8 @@ public class Student {
 	
 	private String country;
 	
+	private LinkedHashMap<String, String> countryOptions;
+	
 	public Student() { // No-arg Constructor
 
 	}
