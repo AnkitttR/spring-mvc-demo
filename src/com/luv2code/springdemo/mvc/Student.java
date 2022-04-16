@@ -1,5 +1,7 @@
 package com.luv2code.springdemo.mvc;
 
+import java.util.LinkedHashMap;
+
 public class Student {
 
 	private String firstName;
@@ -11,7 +13,15 @@ public class Student {
 	private LinkedHashMap<String, String> countryOptions;
 	
 	public Student() { // No-arg Constructor
-
+		
+		// populate country options: used ISO country code
+		countryOptions = new LinkedHashMap<>();
+		
+		countryOptions.put("BR","Brazil");
+		countryOptions.put("FR","France");
+		countryOptions.put("DE","Germany");
+		countryOptions.put("IN","India");
+		countryOptions.put("US","United States of America");
 	}
 
 	public String getFirstName() {
