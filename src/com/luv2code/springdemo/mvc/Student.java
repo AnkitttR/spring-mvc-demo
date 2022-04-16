@@ -12,6 +12,8 @@ public class Student {
 	
 	private LinkedHashMap<String, String> countryOptions;
 	
+	private String favouriteLanguage;
+	
 	//No argument constructor
 	public Student() { 
 		
