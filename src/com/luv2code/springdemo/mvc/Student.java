@@ -12,7 +12,8 @@ public class Student {
 	
 	private LinkedHashMap<String, String> countryOptions;
 	
-	public Student() { // No-arg Constructor
+	//No argument constructor
+	public Student() { 
 		
 		// populate country options: used ISO country code
 		countryOptions = new LinkedHashMap<>();
@@ -51,9 +52,6 @@ public class Student {
 	public LinkedHashMap<String, String> getCountryOptions() {
 		return countryOptions;
 	}
-	
-	
-	
 	
 	
 	}

@@ -31,9 +31,20 @@
 	
 	<!-- items refer to the collection of data  -->
 	<!-- Spring will call student.getCountryOptions() -->
+	
 	</form:select>
 	
 	<br><br>
+	
+	Favourite Language 
+	
+	Java <form:radiobutton path="favouriteLanguage" value="Java"/>
+	C# <form:radiobutton path="favouriteLanguage" value="C#"/>
+	PHP <form:radiobutton path="favouriteLanguage" value="PHP"/>
+	Ruby <form:radiobutton path="favouriteLanguage" value="Ruby"/>
+	
+	<br><br>
+
 	
 	<input type="submit" value="Submit" />
 
