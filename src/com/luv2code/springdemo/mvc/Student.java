@@ -14,6 +14,8 @@ public class Student {
 	
 	private String favouriteLanguage;
 	
+	private String[] operatingSystems;
+	
 	//No argument constructor
 	public Student() { 
 		
