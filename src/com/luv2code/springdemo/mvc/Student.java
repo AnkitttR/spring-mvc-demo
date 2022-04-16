@@ -47,6 +47,10 @@ public class Student {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+
+	public LinkedHashMap<String, String> getCountryOptions() {
+		return countryOptions;
+	}
 	
 	
 	
