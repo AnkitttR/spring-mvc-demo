@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
-
 @Controller
 @RequestMapping("/student")  //Parent Mapping
 public class StudentController {
