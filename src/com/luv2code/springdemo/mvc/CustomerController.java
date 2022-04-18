@@ -27,11 +27,12 @@ public class CustomerController {
 		
 		if (theBindingResult.hasErrors()) {
 			return "customer-form";
-		}else {
+		}
+		
+		else {
 			return "customer-confirmation";
 		}
 		
-		return "customer-confirmation";
 	//Spring will store results of validation in BindingResult object
 				
 	}
