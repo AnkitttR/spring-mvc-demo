@@ -25,6 +25,12 @@ public class CustomerController {
 	public String processForm(@Valid @ModelAttribute("customer") Customer theCustomer,
 			BindingResult theBindingResult) {
 		
+		if (theBindingResult.hasErrors()) {
+			return "customer-form";
+		}else {
+			return "customer-confirmation";
+		}
+		
 		return "customer-confirmation";
 	//Spring will store results of validation in BindingResult object
 				
