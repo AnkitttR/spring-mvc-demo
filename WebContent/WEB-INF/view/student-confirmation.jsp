@@ -23,8 +23,22 @@ Country: ${student.country}
 
 <br><br>
 
-
 Favourite Language: ${student.favouriteLanguage}
+
+<br><br>
+
+Operating Systems:
+
+<!-- ul is unordered list -->
+<ul>
+
+<c:forEach var="temp" items="${student.operatingSystems}">
+
+<li> ${temp} </li>
+
+</c:forEach>
+
+</ul>
 
 </body>
 
