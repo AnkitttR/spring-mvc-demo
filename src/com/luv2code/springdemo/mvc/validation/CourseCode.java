@@ -13,7 +13,20 @@ import javax.validation.Constraint;
 //@Retention is for how long the custom annotation will bw stored or used
 @Constraint(validatedBy = CourseCodeConstarintValidator.class)
 @Target({ElementType.METHOD, ElementType.FIELD})
-@Retention(RetentionPolicy.RUNTIME)
+@Retention(RetentionPolicy.RUNTIME)      //Retain this annotation in java class file & process it at runtime
 public @interface CourseCode {
 
+	// define default course code
+	public String value() default "LUV";
+	
+	// define default error message
+	public String message() default "must start with LUV";
+	
+	// define default groups //can group related constraints
+	public Class<?>[] groups default {};
+	
+	// define default payloads //provide custom details about validation failure
+	public Class<? extends Payload>[] payload default {};
+	
+	
 }
