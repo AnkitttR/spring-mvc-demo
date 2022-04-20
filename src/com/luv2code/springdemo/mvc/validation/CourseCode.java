@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
+import javax.validation.Payload;
 
 // CourseCodeConstarintValidator.class is helper class that contains validation logic
 //@Target tells about the target where to apply the custom annotation CourseCode, i.e can apply
@@ -23,10 +24,10 @@ public @interface CourseCode {
 	public String message() default "must start with LUV";
 	
 	// define default groups //can group related constraints
-	public Class<?>[] groups default {};
+	public Class<?>[] groups() default {};
 	
 	// define default payloads //provide custom details about validation failure
-	public Class<? extends Payload>[] payload default {};
+	public Class<? extends Payload>[] payload() default {};
 	
 	
 }
