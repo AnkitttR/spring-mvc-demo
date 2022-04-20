@@ -12,9 +12,10 @@ public class CourseCodeConstarintValidator implements ConstraintValidator<Course
 		coursePrefix = theCourseCode.value();
 	}
 
+	//Spring MVC will call : isValid()
 	@Override
 	public boolean isValid(String arg0, ConstraintValidatorContext arg1) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 
